@@ -32,7 +32,7 @@
         <a href="#" class="logo">The Gang</a>
         <ul>
             <li>
-                <a href="#">Sign Up</a>
+                <a href="javascript:()" onclick="showPopup();">Sign Up</a>
             </li>
             <li>
                 <a href="#story">The Story</a>
@@ -50,7 +50,7 @@
                 labore doloribus maiores, minima distinctio similique voluptatibus porro quod unde id. Consequuntur, illo.
                 Odio explicabo tempora nam.
             </p>
-            <button class="cta">Sign Me Up!</button>
+            <button class="cta" onclick="showPopup();">Sign Me Up!</button>
         </div>
     </div>
     <div class="sep"></div>
@@ -94,11 +94,12 @@
             <a href="https://greenking.com">Green King</a>
         </div>
     </footer>
-    <div class="popup">
+    <div class="popup" id="popup">
         <div class="blanket"></div>
         <div class="content">
             <h2>Fill In Your Details</h2>
             <form action="">
+                <div class="row">
                 <div class="item">
                     <label>Your First Name</label>
                     <input type="text" placeholder="Awesomeface" value="Bruce">
@@ -107,6 +108,8 @@
                     <label>Your Last Name</label>
                     <input type="text" placeholder="Banner">
                 </div>
+                </div>
+                <div class="row">
                 <div class="item">
                     <label>Your Favorite Color</label>
                     <input type="text" placeholder="Green">
@@ -115,12 +118,14 @@
                     <label>Your Favorite Food</label>
                     <input type="text" placeholder="Mango Float">
                 </div>
+                </div>
                 <button class="cta">I Want In!</button>
             </form>
-            <button class="close">Close</button>
+            <button class="close" onclick="hidePopup();">Close</button>
         </div>
     </div>
 
+    <script src="script.js" type="text/javascript"></script>
 
 </body>
 
